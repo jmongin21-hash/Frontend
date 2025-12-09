@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doodlebucks Arcade</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="background">
+    <div class="blur-blob blob-a"></div>
+    <div class="blur-blob blob-b"></div>
+  </div>
+  <main class="page">
+    <header class="nav">
+      <div class="brand">
+        <div class="brand-mark">DB</div>
+        <div>
+          <div class="brand-name">Doodlebucks Arcade</div>
+          <div class="brand-tagline">Play with your Discord bankroll</div>
+        </div>
+      </div>
+      <div class="auth">
+        <div class="user-pill hidden" id="user-pill">
+          <div class="avatar" id="user-avatar">JD</div>
+          <div class="user-meta">
+            <span id="user-name">User</span>
+            <small id="user-id">#0000</small>
+          </div>
+        </div>
+        <button class="btn primary" id="login-btn">Log in with Discord</button>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="panel highlight">
+        <div class="panel-top">
+          <div>
+            <p class="eyebrow">Balance</p>
+            <h2 id="balance-amount">--</h2>
+            <p class="muted" id="streak-text">Streak: --</p>
+          </div>
+          <button class="btn ghost" id="refresh-btn">Refresh</button>
+        </div>
+        <div class="actions">
+          <button class="btn secondary" id="daily-btn">Claim Daily</button>
+          <div class="cooldown" id="cooldown-text"></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-top">
+          <div>
+            <p class="eyebrow">Blackjack</p>
+            <h3>Beat the dealer, keep the streak</h3>
+          </div>
+          <span class="chip info">Coming soon</span>
+        </div>
+        <p class="muted">Place a bet, draw cards, and stand or hit. Server-side fairness, no client-side shenanigans.</p>
+        <div class="actions">
+          <button class="btn disabled" disabled>Start Table</button>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-top">
+          <div>
+            <p class="eyebrow">Poker</p>
+            <h3>Play the long game</h3>
+          </div>
+          <span class="chip info">Coming soon</span>
+        </div>
+        <p class="muted">Sit at a table, bet rounds, and let the backend handle the deck. Balance syncs with Discord.</p>
+        <div class="actions">
+          <button class="btn disabled" disabled>Join Table</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel skinny">
+      <div class="panel-top">
+        <div>
+          <p class="eyebrow">API Status</p>
+          <h4 id="status-text">Not connected</h4>
+        </div>
+        <button class="btn ghost" id="health-btn">Ping API</button>
+      </div>
+      <pre class="log" id="log-box">Click "Ping API" to check connectivity.</pre>
+    </section>
+  </main>
+
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
